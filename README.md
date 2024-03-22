@@ -2,6 +2,14 @@
 
 A plugin for selecting and displaying favorite tasks.
 
+## Development
+
+Clone this repository into your Leantime plugins folder:
+
+``` shell
+git clone https://github.com/ITK-Leantime/favorite-tasks.git app/Plugins/FavoriteTasks
+```
+
 ### Coding standards
 
 ``` shell
