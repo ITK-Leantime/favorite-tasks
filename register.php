@@ -17,11 +17,9 @@ Events::add_filter_listener(
 Events::add_event_listener(
 // Register event listener.
     'leantime.core.template.tpl.*.beforeSubtasks',
-    // Create function for the event.
     function ($payload) {
         echo app()->make(FavoriteTasks::class)->getFavoriteTaskSubscribeHtml($payload);
     },
-    // Priority
     50
 );
 
