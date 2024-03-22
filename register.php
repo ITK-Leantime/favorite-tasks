@@ -15,13 +15,6 @@ Events::add_filter_listener(
 );
 
 Events::add_event_listener(
-    'leantime.core.template.tpl.*.afterScriptLibTags',
-    function () {
-        echo '<script src="/dist/js/plugin-FavoriteTasks.js"></script>';
-    }
-);
-
-Events::add_event_listener(
 // Register event listener.
     'leantime.core.template.tpl.*.beforeSubtasks',
     // Create function for the event.

@@ -23,11 +23,6 @@ class FavoriteTasks
         $_SESSION['lastPage'] = BASE_URL . '/dashboard/home';
     }
 
-    private static $assets = [
-    '/assets/js/FavoriteTasks.js' => APP_ROOT . '/public/dist/js/plugin-FavoriteTasks.js',
-    ];
-
-
   /**
    * Setup relation table.
    *
@@ -36,13 +31,6 @@ class FavoriteTasks
     public function install(): void
     {
         $this->favoriteTasksRepository->setupTables();
-
-        foreach (static::$assets as $source => $target) {
-            if (file_exists($target)) {
-                unlink($target);
-            }
-            symlink(dirname(__DIR__) . $source, $target);
-        }
     }
 
   /**
@@ -53,12 +41,6 @@ class FavoriteTasks
     public function uninstall(): void
     {
         $this->favoriteTasksRepository->removeTables();
-
-        foreach (static::$assets as $target) {
-            if (file_exists($target)) {
-                unlink($target);
-            }
-        }
     }
 
   /**

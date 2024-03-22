@@ -8,7 +8,7 @@ use Leantime\Core\Controller;
 use Leantime\Plugins\FavoriteTasks\Repositories\FavoriteTasksRepository;
 
 /**
- * Timesheets controller.
+ * Change favorites controller.
  */
 final class ChangeFavorite extends Controller
 {
