@@ -1,22 +1,68 @@
 {
-    "name": "itk-leantime/favorite-tasks",
-    "description": "Favorite tasks plugin for leantime.",
-    "version": "1",
-    "authors": [
-        {
-            "name": "Martin Yde Granath",
-            "email": "my@aarhus.dk"
-        }
-    ],
-    "extra": {
-      "installer-name": "FavoriteTasks"
+  "name": "itk-leantime/favorite-tasks",
+  "description": "Favorite tasks plugin for leantime.",
+  "version": "1",
+  "authors": [
+    {
+      "name": "Martin Yde Granath",
+      "email": "my@aarhus.dk"
     },
-    "homepage": "https://leantime.io",
-    "type": "leantime-plugin",
-    "keywords": [
-    ],
-    "license": "MIT",
-    "require": {
-        "leantime/leantime": "^3.0"
+    {
+      "name": "Sine Jespersen",
+      "email": "sinje@aarhus.dk"
     }
+  ],
+  "extra": {
+    "installer-name": "FavoriteTasks"
+  },
+  "repositories": [
+    {
+      "type": "composer",
+      "url": "https://rimi-itk.github.io/composer/"
+    }
+  ],
+  "homepage": "https://leantime.io",
+  "type": "leantime-plugin",
+  "keywords": [],
+  "license": "MIT",
+  "require-dev": {
+    "leantime/leantime": "^3.0",
+    "psr/log": "^1.1",
+    "squizlabs/php_codesniffer": "^3.9",
+    "friendsofphp/php-cs-fixer": "^3.51",
+    "phpcsstandards/phpcsextra": "^1.2",
+    "zebra-north/phpcs-short-types": "^1.0",
+    "phpstan/phpstan": "^1.10",
+    "phpunit/phpunit": "^10.5"
+  },
+  "scripts": {
+    "coding-standards-check/phpcs": [
+      "phpcs ."
+    ],
+    "coding-standards-check": [
+      "@coding-standards-check/phpcs"
+    ],
+    "coding-standards-apply/phpcbf": [
+      "phpcbf ."
+    ],
+    "coding-standards-apply": [
+      "@coding-standards-apply/phpcbf"
+    ],
+    "code-analysis/phpstan": [
+      "phpstan analyse"
+    ],
+    "code-analysis": [
+      "@code-analysis/phpstan"
+    ],
+    "test": [
+      "phpunit tests/"
+    ]
+  },
+  "config": {
+    "vendor-dir": "vendor-plugin",
+    "allow-plugins": {
+      "dealerdirect/phpcodesniffer-composer-installer": true,
+      "metasyntactical/composer-plugin-license-check": true
+    }
+  }
 }
