@@ -92,6 +92,6 @@ class FavoriteTasks
         $favoriteClass = $isFavorite ? 'button-favorites-remove' : 'button-favorites-add';
         $favoriteIcon = $isFavorite ? '<i class="fa-solid fa-star tw-mr-sm"></i>' : '<i class="fa-regular fa-star tw-mr-sm"></i>';
 
-        return '<div class="' . $favoriteClass . '"><button hx-post="/favorite_tasks/changefavorite" hx-swap="outerHTML" class="buttons-html5 dt-button">' . $favoriteIcon . $label . '</button></div><hr>';
+        return '<div class="' . $favoriteClass . '"><button hx-post="/favorite_tasks/change_favorite" hx-swap="outerHTML" class="buttons-html5 dt-button">' . $favoriteIcon . $label . '</button></div><hr>';
     }
 }

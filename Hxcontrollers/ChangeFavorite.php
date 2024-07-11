@@ -56,6 +56,6 @@ final class ChangeFavorite extends Controller
         $label = $isFavorite ? 'Remove from favorites' : 'Add to favorites';
         $favoriteIcon = $isFavorite ? '<i class="fa-solid fa-star tw-mr-sm"></i>' : '<i class="fa-regular fa-star tw-mr-sm"></i>';
 
-        return new Response('<button hx-post="/favorite_tasks/changefavorite" hx-swap="outerHTML" class="buttons-html5 dt-button">' . $favoriteIcon . $label . '</button><hr>');
+        return new Response('<button hx-post="/favorite_tasks/change_favorite" hx-swap="outerHTML" class="buttons-html5 dt-button">' . $favoriteIcon . $label . '</button><hr>');
     }
 }
