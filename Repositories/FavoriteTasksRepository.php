@@ -2,7 +2,7 @@
 
 namespace Leantime\Plugins\FavoriteTasks\Repositories;
 
-use Leantime\Core\Db as DbCore;
+use Leantime\Core\Db\Db as DbCore;
 use PDO;
 
 /**

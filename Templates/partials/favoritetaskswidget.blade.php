@@ -10,7 +10,7 @@
     'tickets' => []
 ])
 
-<div class="">
+<div>
     <div style="padding:10px 0px">
         <ul class="sortableTicketList">
             @foreach ($tickets as $ticket)

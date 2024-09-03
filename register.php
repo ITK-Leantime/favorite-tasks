@@ -1,20 +1,20 @@
 <?php
 
-use Leantime\Core\Events;
+use Leantime\Core\Events\EventDispatcher;
 use Leantime\Domain\Widgets\Models\Widget;
 use Leantime\Plugins\FavoriteTasks\Services\FavoriteTasks;
 
-Events::add_filter_listener(
+EventDispatcher::add_filter_listener(
     'leantime.domain.widgets.services.widgets.__construct.availableWidgets',
     'defineFavoriteTasksWidget'
 );
 
-Events::add_filter_listener(
+EventDispatcher::add_filter_listener(
     'leantime.domain.widgets.services.widgets.__construct.defaultWidgets',
     'addFavoriteTasksWidgetAsDefault'
 );
 
-Events::add_event_listener(
+EventDispatcher::add_event_listener(
 // Register event listener.
     'leantime.core.template.tpl.*.beforeSubtasks',
     function ($payload) {

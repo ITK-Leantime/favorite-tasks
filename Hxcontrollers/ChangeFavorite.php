@@ -4,7 +4,7 @@ namespace Leantime\Plugins\FavoriteTasks\Hxcontrollers;
 
 use Leantime\Plugins\FavoriteTasks\Services\FavoriteTasks as FavoriteTasksService;
 use Symfony\Component\HttpFoundation\Response;
-use Leantime\Core\Controller;
+use Leantime\Core\Controller\Controller;
 use Leantime\Plugins\FavoriteTasks\Repositories\FavoriteTasksRepository;
 
 /**
@@ -42,14 +42,14 @@ final class ChangeFavorite extends Controller
     public function post(array $payload): Response
     {
         $isFavorite = false;
-        $favorites = $this->favoriteTasksRepository->getUserFavorite($payload['id'], $_SESSION['userdata']['id']);
+        $favorites = $this->favoriteTasksRepository->getUserFavorite($payload['id'], session('userdata.id'));
 
         if (!empty($favorites)) {
             foreach ($favorites as $favorite) {
                 $this->favoriteTasksRepository->deleteFavorite($favorite['id']);
             }
         } else {
-            $this->favoriteTasksRepository->addFavorite($payload['id'], $_SESSION['userdata']['id']);
+            $this->favoriteTasksRepository->addFavorite($payload['id'], session('userdata.id'));
             $isFavorite = true;
         }
 

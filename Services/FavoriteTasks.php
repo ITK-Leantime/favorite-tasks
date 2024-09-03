@@ -20,7 +20,7 @@ class FavoriteTasks
         private readonly FavoriteTasksRepository $favoriteTasksRepository,
         private readonly Tickets $ticketRepository
     ) {
-        $_SESSION['lastPage'] = BASE_URL . '/dashboard/home';
+        session(["lastPage" => BASE_URL . "/dashboard/home"]);
     }
 
   /**
@@ -70,7 +70,7 @@ class FavoriteTasks
    */
     public function getUserFavouriteIssues(): array
     {
-        $userFavorites = $this->favoriteTasksRepository->getUserFavorites($_SESSION['userdata']['id']);
+        $userFavorites = $this->favoriteTasksRepository->getUserFavorites(session('userdata.id'));
         $favorites = [];
 
         foreach ($userFavorites as $favorite) {
@@ -87,7 +87,7 @@ class FavoriteTasks
    */
     public function getFavoriteTaskSubscribeHtml(array $payload): string
     {
-        $isFavorite = !empty($this->favoriteTasksRepository->getUserFavorite($payload['ticketId'], $_SESSION[ 'userdata' ][ 'id' ]));
+        $isFavorite = !empty($this->favoriteTasksRepository->getUserFavorite($payload['ticketId'], session('userdata.id')));
         $label = $isFavorite ? 'Remove from favorites' : 'Add to favorites';
         $favoriteClass = $isFavorite ? 'button-favorites-remove' : 'button-favorites-add';
         $favoriteIcon = $isFavorite ? '<i class="fa-solid fa-star tw-mr-sm"></i>' : '<i class="fa-regular fa-star tw-mr-sm"></i>';
