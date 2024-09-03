@@ -2,7 +2,7 @@
 
 namespace Leantime\Plugins\FavoriteTasks\Hxcontrollers;
 
-use Leantime\Core\HtmxController;
+use Leantime\Core\Controller\HtmxController;
 use Leantime\Plugins\FavoriteTasks\Services\FavoriteTasks as FavoriteTasksService;
 use Leantime\Core\Language;
 
@@ -30,7 +30,7 @@ class FavoriteTasks extends HtmxController
         FavoriteTasksService $favoriteTasksService
     ) {
         $this->favoriteTasksService = $favoriteTasksService;
-        $_SESSION['lastPage'] = BASE_URL . '/dashboard/home';
+        session(["lastPage" => BASE_URL . "/dashboard/home"]);
     }
 
   /**
