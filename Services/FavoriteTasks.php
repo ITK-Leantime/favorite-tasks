@@ -66,11 +66,11 @@ class FavoriteTasks
     }
 
   /**
-   * @return array
+   * @return array<int, mixed>
    */
     public function getUserFavouriteIssues(): array
     {
-        $userFavorites = $this->favoriteTasksRepository->getUserFavorites(session('userdata.id'));
+        $userFavorites = $this->favoriteTasksRepository->getUserFavorites((int)session('userdata.id'));
         $favorites = [];
 
         foreach ($userFavorites as $favorite) {
@@ -81,13 +81,13 @@ class FavoriteTasks
     }
 
   /**
-   * @param array $payload
+   * @param array<string, mixed> $payload
    *
    * @return string
    */
     public function getFavoriteTaskSubscribeHtml(array $payload): string
     {
-        $isFavorite = !empty($this->favoriteTasksRepository->getUserFavorite($payload['ticketId'], session('userdata.id')));
+        $isFavorite = !empty($this->favoriteTasksRepository->getUserFavorite($payload['ticketId'], (int)session('userdata.id')));
         $label = $isFavorite ? 'Remove from favorites' : 'Add to favorites';
         $favoriteClass = $isFavorite ? 'button-favorites-remove' : 'button-favorites-add';
         $favoriteIcon = $isFavorite ? '<i class="fa-solid fa-star tw-mr-sm"></i>' : '<i class="fa-regular fa-star tw-mr-sm"></i>';
