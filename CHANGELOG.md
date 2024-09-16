@@ -7,6 +7,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+* [PR-5](https://github.com/ITK-Leantime/favorite-tasks/pull/5)
+    * Add create-release and deploy files
+    * Update github actions to use markdown runner
+
 * [PR-4](https://github.com/ITK-Leantime/favorite-tasks/pull/4)
     * Make plugin compatible with leantime 3.2.0
     * Change import from Event to EventDispatcher
