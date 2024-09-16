@@ -59,7 +59,6 @@
     ]
   },
   "config": {
-    "vendor-dir": "vendor-plugin",
     "allow-plugins": {
       "dealerdirect/phpcodesniffer-composer-installer": true,
       "metasyntactical/composer-plugin-license-check": true
