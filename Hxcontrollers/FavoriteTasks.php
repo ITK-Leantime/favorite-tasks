@@ -30,7 +30,7 @@ class FavoriteTasks extends HtmxController
         FavoriteTasksService $favoriteTasksService
     ) {
         $this->favoriteTasksService = $favoriteTasksService;
-        session(["lastPage" => BASE_URL . "/dashboard/home"]);
+        session(['lastPage' => BASE_URL . '/dashboard/home']);
     }
 
   /**

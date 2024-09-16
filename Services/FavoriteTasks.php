@@ -20,7 +20,7 @@ class FavoriteTasks
         private readonly FavoriteTasksRepository $favoriteTasksRepository,
         private readonly Tickets $ticketRepository
     ) {
-        session(["lastPage" => BASE_URL . "/dashboard/home"]);
+        session(['lastPage' => BASE_URL . '/dashboard/home']);
     }
 
   /**
