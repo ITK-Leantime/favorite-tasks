@@ -66,6 +66,6 @@ docker compose build && docker compose run --rm php bin/create-release dev-test
 
 ## Deploy
 
-The deploy script downloads a [release](https://github.com/ITK-Leantime/favorite-tasks/releases) from Github and
-unzips it. The script should be passed a tag as argument. In the process the script deletes itself, but the script
-finishes because it [is still in memory](https://linux.die.net/man/3/unlink).
+The deploy script downloads a [release](https://github.com/ITK-Leantime/favorite-tasks/releases) from Github and unzips
+it. The script should be passed a tag as argument. In the process the script deletes itself, but the script finishes
+because it [is still in memory](https://linux.die.net/man/3/unlink).
