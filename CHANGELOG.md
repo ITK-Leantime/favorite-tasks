@@ -7,6 +7,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.0.1] - 2024-09-17
+
 * [PR-5](https://github.com/ITK-Leantime/favorite-tasks/pull/5)
   * Add create-release and deploy files
   * Update github actions to use markdown runner
@@ -26,3 +28,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 * [PR-1](https://github.com/ITK-Leantime/favorite-tasks/pull/1)
   * Added plugin in it's initial state
+
+[unreleased]: https://github.com/ITK-Leantime/favorite-tasks/compare/v0.0.1...HEAD
+[0.0.1]: https://github.com/ITK-Leantime/favorite-tasks/releases/tag/v0.0.1
