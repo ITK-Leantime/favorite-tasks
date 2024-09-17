@@ -35,14 +35,14 @@ final class ChangeFavorite extends Controller
    *
    * @see \Leantime\Core\Frontcontroller::executeAction().
    *
-   * @param array $payload
+     * @param array<string, mixed> $payload
    *
    * @return \Symfony\Component\HttpFoundation\Response
    */
     public function post(array $payload): Response
     {
         $isFavorite = false;
-        $favorites = $this->favoriteTasksRepository->getUserFavorite($payload['id'], session('userdata.id'));
+        $favorites = $this->favoriteTasksRepository->getUserFavorite($payload['id'], (int)session('userdata.id'));
 
         if (!empty($favorites)) {
             foreach ($favorites as $favorite) {

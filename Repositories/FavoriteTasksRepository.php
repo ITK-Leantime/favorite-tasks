@@ -93,7 +93,7 @@ class FavoriteTasksRepository
    * @param int $issueId
    * @param int $userId
    *
-   * @return array|false
+   * @return array<string, mixed>|false
    */
     public function getUserFavorite(int $issueId, int $userId)
     {
@@ -123,7 +123,7 @@ class FavoriteTasksRepository
    *
    * @param int $userId
    *
-   * @return bool|array
+   * @return bool|array<string, mixed>
    */
     public function getUserFavorites(int $userId): bool|array
     {

@@ -26,9 +26,9 @@ EventDispatcher::add_event_listener(
 /**
  * Define the favorite tasks widget.
  *
- * @param array $availableWidgets
+ * @param array<string, mixed> $availableWidgets
  *
- * @return mixed
+ * @return array<string, mixed>
  * @throws \Illuminate\Contracts\Container\BindingResolutionException
  */
 function defineFavoriteTasksWidget(array $availableWidgets): array
@@ -41,9 +41,9 @@ function defineFavoriteTasksWidget(array $availableWidgets): array
 /**
  * Add the widget to default widgets.
  *
- * @param array $defaultWidgets
+ * @param array<string, mixed> $defaultWidgets
  *
- * @return mixed
+ * @return array<string, mixed>
  * @throws \Illuminate\Contracts\Container\BindingResolutionException
  */
 function addFavoriteTasksWidgetAsDefault(array $defaultWidgets): array
