@@ -13,6 +13,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   * Removed `extra` from `composer.json`
   * Change homepage in  `composer.json`
   * Updated leantime to 3.4.3, which was what i set out to do
+  * markdownlintignore added
+
 ## [2.0.0] - 2024-09-18
 
 * [PR-5](https://github.com/ITK-Leantime/favorite-tasks/pull/5)
