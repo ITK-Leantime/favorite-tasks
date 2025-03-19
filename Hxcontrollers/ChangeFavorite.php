@@ -2,7 +2,6 @@
 
 namespace Leantime\Plugins\FavoriteTasks\Hxcontrollers;
 
-use Leantime\Plugins\FavoriteTasks\Services\FavoriteTasks as FavoriteTasksService;
 use Symfony\Component\HttpFoundation\Response;
 use Leantime\Core\Controller\Controller;
 use Leantime\Plugins\FavoriteTasks\Repositories\FavoriteTasksRepository;

@@ -4,7 +4,6 @@ namespace Leantime\Plugins\FavoriteTasks\Hxcontrollers;
 
 use Leantime\Core\Controller\HtmxController;
 use Leantime\Plugins\FavoriteTasks\Services\FavoriteTasks as FavoriteTasksService;
-use Leantime\Core\Language;
 
 /**
  *  A controller for displaying a template with favorite tasks.
