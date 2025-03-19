@@ -7,6 +7,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+* [PR-8](https://github.com/ITK-Leantime/favorite-tasks/pull/8)
+  * Linted blade and added blade*linting to readme
+  * Removed unused imports
+  * Removed `extra` from `composer.json`
+  * Change homepage in  `composer.json`
+  * Updated leantime to 3.4.3, which was what i set out to do
 ## [2.0.0] - 2024-09-18
 
 * [PR-5](https://github.com/ITK-Leantime/favorite-tasks/pull/5)
