@@ -7,7 +7,7 @@
     'ticketsInGoals' => 0,
     'doneTodayCount' => 0,
     'totalTodayCount' => 0,
-    'tickets' => []
+    'tickets' => [],
 ])
 
 <div>
@@ -25,7 +25,10 @@
                                 </strong>
                             </div>
                             <div class="col-md-2">
-                                <a href="/?tab=timesheet#/tickets/showTicket/{{ $ticket->id }}" onclick="jQuery(this).addClass('go')" class="favoriteIssue favoriteStar margin-right tw-mr-[5px]" data-tippy-content="Favorite-issue">
+                                <a href="/?tab=timesheet#/tickets/showTicket/{{ $ticket->id }}"
+                                    onclick="jQuery(this).addClass('go')"
+                                    class="favoriteIssue favoriteStar margin-right tw-mr-[5px]"
+                                    data-tippy-content="Favorite-issue">
                                     <i class="fa-regular fa-clock"></i>
                                 </a>
                                 <i class="fa-solid fa-star"></i>
