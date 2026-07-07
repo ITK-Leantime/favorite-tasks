@@ -29,7 +29,7 @@ tasks:
   code-analysis:
     desc: Run static analysis (phpstan)
     cmds:
-      - docker run --interactive --rm --volume ${PWD}:/app itkdev/php8.3-fpm:latest composer code-analysis
+      - docker run --interactive --rm --volume ${PWD}:/app --env PHP_MEMORY_LIMIT=256M itkdev/php8.3-fpm:latest composer code-analysis
 
   coding-standards:check:
     desc: Run all coding standards checks
