@@ -3,4 +3,10 @@ composer.lock
 node_modules
 yarn.lock
 .DS_Store
+*.cache
+
+# Release artifacts
+release/
+checksum.txt
+*.tar.gz
 

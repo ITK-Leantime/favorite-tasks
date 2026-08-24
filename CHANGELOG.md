@@ -7,6 +7,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+* [PR-9](https://github.com/ITK-Leantime/favorite-tasks/pull/9)
+  * Normalize scaffolding.
+  * Migrate repository data access from raw PDO to the query builder.
 * [PR-8](https://github.com/ITK-Leantime/favorite-tasks/pull/8)
   * Linted blade and added blade*linting to readme
   * Removed unused imports
